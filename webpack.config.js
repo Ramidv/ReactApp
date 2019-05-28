@@ -1,5 +1,14 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
+
 module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        library: 'reactapp',
+        libraryTarget: 'umd',
+        filename: 'bundle.js'
+    },
     module: {
         rules: [
             {
